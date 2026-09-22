@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>eCart - Inventory Range</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>eCart</h1>
+        <p>Inventory Range Checker</p>
+    </header>
+
+    <main>
+
+        <!-- Inventory Section -->
+        <section class="inventory-section">
+
+            <h2>Product Inventory</h2>
+
+            <div id="inventory-list">
+                <!-- Products will be displayed here -->
+            </div>
+
+        </section>
+
+
+        <!-- Range Section -->
+        <section class="range-section">
+
+            <h2>Check Inventory Range</h2>
+
+            <label for="start-product">Start Product</label>
+
+            <select id="start-product">
+                <option value="">Select Start Product</option>
+            </select>
+
+
+            <label for="end-product">End Product</label>
+
+            <select id="end-product">
+                <option value="">Select End Product</option>
+            </select>
+
+            <div class="buttons">
+                <button id="check-btn">
+                    Check Inventory
+                </button>
+
+                <button id="reset-btn">
+                    Reset
+                </button>
+            </div>
+
+
+            <div id="result">
+                Select a range to see the total inventory.
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
