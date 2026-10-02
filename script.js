@@ -19,7 +19,7 @@ function displayProducts() {
     for (let i = 0; i < inventory.length; i++) {
 
         let product = document.createElement("div");
-
+        
         product.className = "product";
 
         product.innerHTML =
