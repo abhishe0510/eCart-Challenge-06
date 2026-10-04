@@ -70,7 +70,10 @@ h2 {
     color: #555;
 }
 
-
+.product p.low-stock {
+    color: red;
+    font-weight: bold;
+}
 
 label {
     display: block;

@@ -19,12 +19,21 @@ function displayProducts() {
     for (let i = 0; i < inventory.length; i++) {
 
         let product = document.createElement("div");
-        
+
         product.className = "product";
+
+        let warning = "";
+        let stockClass = "";
+
+        if (inventory[i].stock <= 15) {
+            stockClass = "low-stock";
+            warning = "<p class='low-stock'>⚠️ Low Stock</p>";
+        }
 
         product.innerHTML =
             "<h3>" + inventory[i].name + "</h3>" +
-            "<p>Stock: " + inventory[i].stock + "</p>";
+            "<p class='" + stockClass + "'>Stock: " + inventory[i].stock + "</p>" +
+            warning;
 
         inventoryList.appendChild(product);
     }
