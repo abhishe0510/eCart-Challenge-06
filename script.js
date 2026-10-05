@@ -141,8 +141,10 @@ function checkInventory() {
         total = prefixSum[endIndex] - prefixSum[startIndex - 1];
     }
 
+    let productCount = endIndex - startIndex + 1;
 
-    result.textContent =
+    result.innerHTML =
+        "Products in range: " + productCount + "<br>" +
         "Total inventory from " +
         startName +
         " to " +
