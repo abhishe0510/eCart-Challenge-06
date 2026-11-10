@@ -107,31 +107,28 @@ function checkInventory() {
     if (startName === "" || endName === "") {
 
         result.textContent = "Please select both products.";
-
         return;
     }
-
 
     let startIndex = binarySearch(startName);
     let endIndex = binarySearch(endName);
 
-
     if (startIndex === -1 || endIndex === -1) {
 
         result.textContent = "Product not found.";
-
         return;
     }
-
 
     if (startIndex > endIndex) {
 
-        result.textContent =
-            "Start product must come before end product.";
+        let temp = startIndex;
+        startIndex = endIndex;
+        endIndex = temp;
 
-        return;
+        let tempName = startName;
+        startName = endName;
+        endName = tempName;
     }
-
 
     let total;
 
@@ -143,14 +140,19 @@ function checkInventory() {
 
     let productCount = endIndex - startIndex + 1;
 
+    let productNames = "";
+
+    for (let i = startIndex; i <= endIndex; i++) {
+        productNames = productNames + inventory[i].name + "<br>";
+    }
+
     result.innerHTML =
-        "Products in range: " + productCount + "<br>" +
-        "Total inventory from " +
-        startName +
-        " to " +
-        endName +
-        " = " +
-        total;
+        "<strong>Products in Range:</strong><br>" +
+        productNames +
+        "<br>" +
+        "Total Products: " + productCount +
+        "<br>" +
+        "Total Inventory: " + total;
 }
 
 function resetInventory() {
