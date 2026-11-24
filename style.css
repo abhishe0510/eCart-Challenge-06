@@ -143,3 +143,37 @@ button:hover {
 #reset-btn:hover {
     background-color: #555;
 }
+
+.summary-section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.summary-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.summary-card {
+    background-color: #f4f6f8;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.summary-card h3 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.summary-card p {
+    color: #555;
+}
+
+#low-stock-count {
+    color: red;
+}
