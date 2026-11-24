@@ -4,7 +4,9 @@ let endProduct = document.getElementById("end-product");
 let checkButton = document.getElementById("check-btn");
 let resetButton = document.getElementById("reset-btn");
 let result = document.getElementById("result");
-
+let totalProducts = document.getElementById("total-products");
+let totalStock = document.getElementById("total-stock");
+let lowStockCount = document.getElementById("low-stock-count");
 
 inventory.sort(function(a, b) {
     return a.name.localeCompare(b.name);
@@ -155,6 +157,25 @@ function checkInventory() {
         "Total Inventory: " + total;
 }
 
+function displaySummary() {
+
+    let stock = 0;
+    let lowStock = 0;
+
+    for (let i = 0; i < inventory.length; i++) {
+
+        stock = stock + inventory[i].stock;
+
+        if (inventory[i].stock <= 15) {
+            lowStock++;
+        }
+    }
+
+    totalProducts.innerText = inventory.length;
+    totalStock.innerText = stock;
+    lowStockCount.innerText = lowStock;
+}
+
 function resetInventory() {
 
     startProduct.value = "";
@@ -170,3 +191,4 @@ resetButton.addEventListener("click", resetInventory);
 displayProducts();
 fillDropdowns();
 createPrefixSum();
+displaySummary();
