@@ -16,7 +16,34 @@
         <p>Inventory Range Checker</p>
     </header>
 
-    <main>
+        <main>
+
+        <!-- Inventory Summary -->
+        <section class="summary-section">
+
+            <h2>Inventory Overview</h2>
+
+            <div class="summary-container">
+
+                <div class="summary-card">
+                    <h3 id="total-products">0</h3>
+                    <p>Total Products</p>
+                </div>
+
+                <div class="summary-card">
+                    <h3 id="total-stock">0</h3>
+                    <p>Total Stock</p>
+                </div>
+
+                <div class="summary-card">
+                    <h3 id="low-stock-count">0</h3>
+                    <p>Low Stock Products</p>
+                </div>
+
+            </div>
+
+        </section>
+
 
         <!-- Inventory Section -->
         <section class="inventory-section">
@@ -41,7 +68,6 @@
                 <option value="">Select Start Product</option>
             </select>
 
-
             <label for="end-product">End Product</label>
 
             <select id="end-product">
@@ -49,6 +75,7 @@
             </select>
 
             <div class="buttons">
+
                 <button id="check-btn">
                     Check Inventory
                 </button>
@@ -56,8 +83,8 @@
                 <button id="reset-btn">
                     Reset
                 </button>
-            </div>
 
+            </div>
 
             <div id="result">
                 Select a range to see the total inventory.
