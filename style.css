@@ -177,3 +177,18 @@ button:hover {
 #low-stock-count {
     color: red;
 }
+
+.in-stock {
+    color: green;
+    font-weight: bold;
+}
+
+.low-stock {
+    color: red;
+    font-weight: bold;
+}
+
+.out-of-stock {
+    color: #777;
+    font-weight: bold;
+}
