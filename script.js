@@ -24,18 +24,28 @@ function displayProducts() {
 
         product.className = "product";
 
-        let warning = "";
+        let status = "";
         let stockClass = "";
 
-        if (inventory[i].stock <= 15) {
+        if (inventory[i].stock === 0) {
+            status = "Out of Stock";
+            stockClass = "out-of-stock";
+        }
+        else if (inventory[i].stock <= 15) {
+            status = "Low Stock";
             stockClass = "low-stock";
-            warning = "<p class='low-stock'>⚠️ Low Stock</p>";
+        }
+        else {
+            status = "In Stock";
+            stockClass = "in-stock";
         }
 
         product.innerHTML =
             "<h3>" + inventory[i].name + "</h3>" +
-            "<p class='" + stockClass + "'>Stock: " + inventory[i].stock + "</p>" +
-            warning;
+            "<p class='" + stockClass + "'>Stock: " +
+            inventory[i].stock + "</p>" +
+            "<p class='" + stockClass + "'>" +
+            status + "</p>";
 
         inventoryList.appendChild(product);
     }
