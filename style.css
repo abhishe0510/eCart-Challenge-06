@@ -192,3 +192,13 @@ button:hover {
     color: #777;
     font-weight: bold;
 }
+
+.product {
+    transition: 0.2s;
+}
+
+.product:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
