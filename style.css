@@ -210,3 +210,11 @@ button:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
+#search-product {
+    width: 100%;
+    padding :10px;
+    margin-bottom: 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
